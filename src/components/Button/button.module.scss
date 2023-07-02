@@ -1,0 +1,21 @@
+@import "../../styles/vars.scss";
+
+.btn{
+    background: -webkit-linear-gradient(45deg, rgb(212, 180, 112), rgb(225, 203, 157), rgb(212, 180, 112));
+    background: -moz-linear-gradient(45deg, rgb(212, 180, 112), rgb(225, 203, 157), rgb(212, 180, 112));
+    background: linear-gradient(45deg, rgb(212, 180, 112), rgb(225, 203, 157), rgb(212, 180, 112));
+    color: $base-white;
+    font-family: $OpenS;
+    font-size: 1vw;
+    letter-spacing: 0.3px;
+    border-radius: 10px;
+    width: fit-content;
+    height: 100%;
+    box-sizing: border-box;
+    align-self: center;
+    padding: 20px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 5px 8px -5px rgba(34, 60, 80, 0.6);
+-moz-box-shadow: 0px 5px 8px -5px rgba(34, 60, 80, 0.6);
+box-shadow: 0px 5px 8px -5px rgba(34, 60, 80, 0.6);
+}

@@ -1,0 +1,169 @@
+@import "../../styles/vars.scss";
+
+.container{
+background: url("../../assets/img/fon.png");
+width: 100%;
+height: calc(100vh - 110px);
+min-height: 800px;
+display: flex;
+justify-content: center;
+.main{
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+}
+.left{
+    width: 60%;
+    align-self: end;
+    padding: 0 0 40px;
+    .title{
+        font-family: $NeueB;
+        color: $base-gray;
+        background-color: $base-gray;
+        background-image: linear-gradient(180deg, rgb(43, 43, 43), rgb(121, 121, 121) 57%, rgb(26, 26, 26));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 3vw;
+        width: 80%;
+        line-height: 120%;
+        letter-spacing: 0.2px;
+        padding: 20px 0;
+        margin: 0;
+    }
+    .promo_block{
+        display: flex;
+        align-items: center;
+        .promo_label{
+            color: $base-white;
+            font-family: $NeueB;
+            border-radius: 10px;
+            margin-right: 10px;
+            font-size: 2.2vw;
+            padding: 5px 10px;
+            background: linear-gradient(180deg, rgb(255, 0, 0), rgb(255, 131, 131) 57%, rgb(255, 0, 0));
+        }
+        .promo_txt{
+            font-family: $NeueR;
+            font-size: 1.9vw;
+            background-color: $base-gray;
+            background-image: linear-gradient(180deg, rgb(43, 43, 43), rgb(121, 121, 121) 57%, rgb(26, 26, 26));
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            .price{
+                text-decoration: line-through;
+                text-decoration-color: red;
+                margin-right: 10px;
+            }
+        }
+    }
+    .list_title{
+        font-family: $NeueR;
+        font-size: 2vw;
+        background-color: $base-gray;
+        background-image: linear-gradient(180deg, rgb(43, 43, 43), rgb(121, 121, 121) 57%, rgb(26, 26, 26));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 10px 0 0;   
+    .bold{
+        font-family: $NeueB;
+    }}
+    ul{
+        margin: 5px 0;
+        li{
+            font-family: $OpenR;
+        font-size: 1.2vw;
+        color: $base-gray;
+        }
+    }
+    .txt_vizit{
+        font-family: $NeueB;
+        color: $base-gray;
+        background-color: $base-gray;
+        background-image: linear-gradient(180deg, rgb(43, 43, 43), rgb(121, 121, 121) 57%, rgb(26, 26, 26));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1.8vw;
+        letter-spacing: 0.2px;
+        padding: 10px 0;
+    }
+    .minicards{
+        display: flex;
+        width: 60%;
+        min-width: 450px;
+        .minicard{
+            width: 33%;
+            font-family: $OpenS;
+            color: $base-gray;
+            font-size: 1vw;
+            line-height: 120%;
+            letter-spacing: 0.3px;
+            img{
+                max-width: 100px;
+            }
+        }
+    }
+}
+.right{
+    background-image: url("../../assets/img/man.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    align-self: flex-end;
+    min-height: calc(100vh - 110px);
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    .sticker{
+        margin-bottom: 40px;
+        width: 80%;
+        padding: 10px 30px 0;
+        border-radius: 20px;
+        color: $base-gray;
+        display: flex;
+        background: -webkit-linear-gradient(45deg, #dfdfdf, rgb(255, 255, 255));
+        background: -moz-linear-gradient(45deg,#dfdfdf, rgb(255, 255, 255));
+        background: linear-gradient(45deg, #dfdfdf, rgb(255, 255, 255));
+        -webkit-box-shadow: 0px 5px 8px -5px rgba(34, 60, 80, 0.6);
+        -moz-box-shadow: 0px 5px 8px -5px rgba(34, 60, 80, 0.6);
+        box-shadow: 0px 5px 8px -5px rgba(34, 60, 80, 0.6);
+        .header{
+            font-family: $NeueB;
+            font-size: 2vw;
+        }
+        .text{
+            display: flex;
+            .txt, .txt1{
+                font-family: $OpenR;
+                font-size: 1.1vw;
+                letter-spacing: 0.6px;
+                line-height: 130%;
+                padding: 0 5px;
+                margin: 5px 0;
+
+            }
+            .txt1{
+                border-right: 1px solid $base-gold;
+            }
+        }
+        .point{
+            font-family: $NeueR;
+            font-size: 1.5vw;
+            line-height: 130%;
+        }
+       
+         img{
+            position: absolute;
+            align-self: flex-end;
+         justify-self: flex-end;
+         left: calc(50vw + 30% );
+         width: 10%;
+         }
+    }
+    
+}
+.btns_container{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+}

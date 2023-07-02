@@ -1,0 +1,79 @@
+@import "../../styles/vars.scss";
+
+.header__container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-height: 110px;
+}
+    .header{
+        padding: 5px 0;
+        width: 80%;
+        max-width: 1300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo_block{
+            display: flex;
+            align-items: center;
+            width: 200px;
+            justify-content: space-between;
+        }
+        .logo{
+            max-width: 90px;
+        }
+        .geo_block{
+            
+            display: flex;
+            align-items: center;
+            margin-left: 2.5vw;
+            p{
+            font-family: $OpenL;
+            font-weight: 300;
+            font-size: 39px; 
+            margin-left: 5px;
+
+            }
+            img{
+                max-height: 40px;
+                margin-right: 10px;
+            } }
+        .right_block{
+            display: flex;
+            align-items: center;
+            .icons_block{
+                padding: 0 20px;
+                display: flex;
+                a{display: flex;
+                    justify-content: center;
+                    padding: 10px;
+                    margin: 0 5px;
+                    background-color: #EDEDED;
+                    border-radius: 50%;
+                    height: 30px;
+                    width: 30px;
+
+                }
+            }
+            .phone_block{
+                text-align: right;
+                a{
+                    display: flex;
+                    align-items: center;
+                    font-family: $OpenR;
+                    font-size: 2vw;
+                    text-decoration: none;
+                    color: #000000;
+                    p{
+                        margin: 0 0 0 10px ;
+                    }
+                }
+                .btn{
+                font-family: $OpenL;
+                font-size: 2vw;
+                text-decoration:underline 1px;
+                cursor: pointer;
+                }
+            }
+        }
+    }

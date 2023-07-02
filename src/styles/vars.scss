@@ -1,0 +1,92 @@
+@font-face {
+	font-family: "Open Sans Light";
+        font-weight: 300;
+        font-style: normal;
+	src:
+        url("../assets/fonts/Open_Sans/static/OpenSans_Condensed-Light.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Open Sans Bold";
+        font-weight: 700;
+        font-style: normal;
+	src:
+        url("../assets/fonts/Open_Sans/static/OpenSans_Condensed-Bold.ttf") format("truetype"),
+}
+@font-face {
+	font-family: "Open Sans Italic";
+        font-weight: 500;
+        font-style: italic;
+	src:
+        url("../assets/fonts/Open_Sans/static/OpenSans_Condensed-MediumItalic.ttf") format("truetype"),
+        
+}
+@font-face {
+	font-family: "Open Sans Regular";
+        font-weight: 400;
+        font-style: normal;
+	src:
+        url("../assets/fonts/Open_Sans/static/OpenSans_Condensed-Regular.ttf") format("truetype"),
+}
+@font-face {
+	font-family: "Open Sans SemiBold";
+        font-weight: 600;
+        font-style: normal;
+	src:
+        url("../assets/fonts/Open_Sans/static/OpenSans_Condensed-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Nunito Light";
+        font-weight: 300;
+        font-style: normal;
+	src: url("../assets/fonts/Nunito/static/Nunito-Light.ttf") format("truetype"),
+}
+@font-face {
+	font-family: "Nunito Regular";
+        font-weight: 400;
+        font-style: normal;
+	src:  url("../assets/fonts/Nunito/static/Nunito-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Bebas Neue Bold";
+        font-weight: 700;
+        font-style: normal;
+	src: url("../assets/fonts/bebasneue/BebasNeue\ Bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Bebas Neue Light";
+        font-weight: 300;
+        font-style: normal;
+	src: url("../assets/fonts/bebasneue/BebasNeue\ Light.ttf") format("truetype");}
+@font-face {
+	font-family: "Bebas Neue Regular";
+        font-weight: 400;
+        font-style: normal;
+	src: url("../assets/fonts/bebasneue/BebasNeue\ Regular.ttf") format("truetype");
+}
+
+
+
+$OpenL: "Open Sans Light";
+$OpenB: "Open Sans Bold";
+$OpenS: "Open Sans SemiBold";
+$OpenI: "Open Sans Italic";
+$OpenR: "Open Sans Regular";
+
+$NeueL: "Bebas Neue Light";
+$NeueR: "Bebas Neue Regular";
+$NeueB: "Bebas Neue Bold";
+
+
+$NunitoL: "Nunito Light";
+$NunitoR: "Nunito Regular";
+
+
+
+$base-gray: #565656;
+$second-gray: #585858;
+$button-gray: #C7C7C7;
+$base-white: #FFFFFF;
+$base-black: #000000;
+$base-gold: #D4B470;

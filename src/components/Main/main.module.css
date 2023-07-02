@@ -1,0 +1,291 @@
+@font-face {
+  font-family: "Open Sans Light";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../assets/fonts/Open_Sans/static/OpenSans_Condensed-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../assets/fonts/Open_Sans/static/OpenSans_Condensed-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  font-weight: 500;
+  font-style: italic;
+  src: url("../assets/fonts/Open_Sans/static/OpenSans_Condensed-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/fonts/Open_Sans/static/OpenSans_Condensed-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans SemiBold";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../assets/fonts/Open_Sans/static/OpenSans_Condensed-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito Light";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../assets/fonts/Nunito/static/Nunito-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/fonts/Nunito/static/Nunito-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bebas Neue Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../assets/fonts/bebasneue/BebasNeue Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bebas Neue Light";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../assets/fonts/bebasneue/BebasNeue Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bebas Neue Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/fonts/bebasneue/BebasNeue Regular.ttf") format("truetype");
+}
+
+.container {
+  background: url("../../assets/img/fon.png");
+  width: 100%;
+  height: calc(100vh - 110px);
+  min-height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .main {
+  width: 90%;
+  max-width: 1300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .left {
+  width: 60%;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  padding: 0 0 40px;
+}
+
+.container .left .title {
+  font-family: "Bebas Neue Bold";
+  color: #565656;
+  background-color: #565656;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2b2b2b), color-stop(57%, #797979), to(#1a1a1a));
+  background-image: linear-gradient(180deg, #2b2b2b, #797979 57%, #1a1a1a);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3vw;
+  width: 80%;
+  line-height: 120%;
+  letter-spacing: 0.2px;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.container .left .promo_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .left .promo_block .promo_label {
+  color: #FFFFFF;
+  font-family: "Bebas Neue Bold";
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 2.2vw;
+  padding: 5px 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(red), color-stop(57%, #ff8383), to(red));
+  background: linear-gradient(180deg, red, #ff8383 57%, red);
+}
+
+.container .left .promo_block .promo_txt {
+  font-family: "Bebas Neue Regular";
+  font-size: 1.9vw;
+  background-color: #565656;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2b2b2b), color-stop(57%, #797979), to(#1a1a1a));
+  background-image: linear-gradient(180deg, #2b2b2b, #797979 57%, #1a1a1a);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container .left .promo_block .promo_txt .price {
+  text-decoration: line-through;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
+  margin-right: 10px;
+}
+
+.container .left .list_title {
+  font-family: "Bebas Neue Regular";
+  font-size: 2vw;
+  background-color: #565656;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2b2b2b), color-stop(57%, #797979), to(#1a1a1a));
+  background-image: linear-gradient(180deg, #2b2b2b, #797979 57%, #1a1a1a);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 10px 0 0;
+}
+
+.container .left .list_title .bold {
+  font-family: "Bebas Neue Bold";
+}
+
+.container .left ul {
+  margin: 5px 0;
+}
+
+.container .left ul li {
+  font-family: "Open Sans Regular";
+  font-size: 1.2vw;
+  color: #565656;
+}
+
+.container .left .txt_vizit {
+  font-family: "Bebas Neue Bold";
+  color: #565656;
+  background-color: #565656;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2b2b2b), color-stop(57%, #797979), to(#1a1a1a));
+  background-image: linear-gradient(180deg, #2b2b2b, #797979 57%, #1a1a1a);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.8vw;
+  letter-spacing: 0.2px;
+  padding: 10px 0;
+}
+
+.container .left .minicards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  min-width: 450px;
+}
+
+.container .left .minicards .minicard {
+  width: 33%;
+  font-family: "Open Sans SemiBold";
+  color: #565656;
+  font-size: 1vw;
+  line-height: 120%;
+  letter-spacing: 0.3px;
+}
+
+.container .left .minicards .minicard img {
+  max-width: 100px;
+}
+
+.container .right {
+  background-image: url("../../assets/img/man.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  min-height: calc(100vh - 110px);
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container .right .sticker {
+  margin-bottom: 40px;
+  width: 80%;
+  padding: 10px 30px 0;
+  border-radius: 20px;
+  color: #565656;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: linear-gradient(45deg, #dfdfdf, white);
+  -webkit-box-shadow: 0px 5px 8px -5px rgba(34, 60, 80, 0.6);
+  box-shadow: 0px 5px 8px -5px rgba(34, 60, 80, 0.6);
+}
+
+.container .right .sticker .header {
+  font-family: "Bebas Neue Bold";
+  font-size: 2vw;
+}
+
+.container .right .sticker .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .right .sticker .text .txt, .container .right .sticker .text .txt1 {
+  font-family: "Open Sans Regular";
+  font-size: 1.1vw;
+  letter-spacing: 0.6px;
+  line-height: 130%;
+  padding: 0 5px;
+  margin: 5px 0;
+}
+
+.container .right .sticker .text .txt1 {
+  border-right: 1px solid #D4B470;
+}
+
+.container .right .sticker .point {
+  font-family: "Bebas Neue Regular";
+  font-size: 1.5vw;
+  line-height: 130%;
+}
+
+.container .right .sticker img {
+  position: absolute;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-end;
+  left: calc(50vw + 30%);
+  width: 10%;
+}
+
+.container .btns_container {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.module.css.map */
