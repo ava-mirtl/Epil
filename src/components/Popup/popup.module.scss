@@ -1,1 +1,98 @@
-@import "../../styles/vars.scss"
+@import "../../styles/vars.scss";
+
+.container{
+background-color: rgba(0, 0, 0, 0.568);
+position: absolute;
+width: 100vw;
+height: 100vh;
+top:0;
+left:0;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.popup_container{
+    width: 600px;
+    height: 400px;
+    padding: 20px 20px 0 20px;
+    background: url('../../assets/img/popup_fon.png');
+    border-radius: 20px;
+}
+.title{
+    font-family: $NeueB;
+    color: $base-gray;
+    background-color: $base-gray;
+    background-image: linear-gradient(180deg, rgb(43, 43, 43), rgb(121, 121, 121) 57%, rgb(26, 26, 26));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30pt;
+    width: 100%;
+    line-height: 120%;
+    letter-spacing: 0.2px;
+    
+}
+.x{
+    width:20px;
+    font-family: $NeueB;
+    color: $base-gray;
+    background-color: $base-gray;
+    background-image: linear-gradient(180deg, rgb(43, 43, 43), rgb(121, 121, 121) 57%, rgb(26, 26, 26));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30pt;
+    line-height: 120%;
+    letter-spacing: 0.2px;
+    
+    cursor: pointer;
+}
+.content_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .left{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+}
+.form_container{
+    form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    input{
+        font-family: $OpenB;
+        height: 65px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 1px solid $button-gray;
+        padding-left: 10px;
+        font-size: 1.2vmax;
+        color: $base-gray;
+        ::placeholder{
+            color: $button-gray;
+        }
+    }
+    button{
+        width: 100%;
+        font-size: 1.2vmax;
+        max-height: 65px;
+    }
+    }
+}
+.lady{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+    img{
+        width: 100%;
+        max-width: 600px;
+    }
+}

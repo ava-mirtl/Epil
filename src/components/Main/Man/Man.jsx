@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DataContext } from '../../data/data';
+
+
 import Sticker from "../Sticker";
 import Cards from "../Minicards";
-import Buttons from '../Buttons';
-import styles from "../main.module.scss"
+import Popup from '../../Popup/Popup';
+import Button from '../../Button/Button';
+import Youtube from '../../Youtube/Youtube';
+import lady from "../../../assets/img/popup_img.png"
+import styles from "../main.module.scss";
 
 export default function Man() {
+    const {active, modal, setActive, setModalActive} = useContext(DataContext);
 
-    return (
+    return (<>
         <div className={styles.container}>
             <div className={styles.main}>
                 <div className={styles.left}>
@@ -28,11 +35,16 @@ export default function Man() {
                     Результат после 1 посещения!
                     </div>
                     <Cards/>
-                    <Buttons/>
+                    <div className={styles.btns_container}>
+                        <Button txt="ЗАПИСАТЬСЯ ОНЛАЙН" setState={setActive}/>
+                        <Youtube/>
+                    </div>
                 </div> 
                 <div className={styles.right}>
                     <Sticker/>
                 </div>
             </div>
         </div>
+        {active&&<Popup img={lady} txt="Оставьте Ваш номер телефона и мы с вами свяжемся!" setState={setActive}/>}
+        </>
         )}

@@ -67,4 +67,153 @@
   font-style: normal;
   src: url("../assets/fonts/bebasneue/BebasNeue Regular.ttf") format("truetype");
 }
+
+.container {
+  background-color: rgba(0, 0, 0, 0.568);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup_container {
+  width: 600px;
+  height: 400px;
+  padding: 20px 20px 0 20px;
+  background: url("../../assets/img/popup_fon.png");
+  border-radius: 20px;
+}
+
+.title {
+  font-family: "Bebas Neue Bold";
+  color: #565656;
+  background-color: #565656;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2b2b2b), color-stop(57%, #797979), to(#1a1a1a));
+  background-image: linear-gradient(180deg, #2b2b2b, #797979 57%, #1a1a1a);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30pt;
+  width: 100%;
+  line-height: 120%;
+  letter-spacing: 0.2px;
+}
+
+.x {
+  width: 20px;
+  font-family: "Bebas Neue Bold";
+  color: #565656;
+  background-color: #565656;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2b2b2b), color-stop(57%, #797979), to(#1a1a1a));
+  background-image: linear-gradient(180deg, #2b2b2b, #797979 57%, #1a1a1a);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30pt;
+  line-height: 120%;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+
+.content_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.content_container .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.form_container form {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.form_container form input {
+  font-family: "Open Sans Bold";
+  height: 65px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #C7C7C7;
+  padding-left: 10px;
+  font-size: 1.2vmax;
+  color: #565656;
+}
+
+.form_container form input ::-webkit-input-placeholder {
+  color: #C7C7C7;
+}
+
+.form_container form input :-ms-input-placeholder {
+  color: #C7C7C7;
+}
+
+.form_container form input ::-ms-input-placeholder {
+  color: #C7C7C7;
+}
+
+.form_container form input ::placeholder {
+  color: #C7C7C7;
+}
+
+.form_container form button {
+  width: 100%;
+  font-size: 1.2vmax;
+  max-height: 65px;
+}
+
+.lady {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.lady img {
+  width: 100%;
+  max-width: 600px;
+}
 /*# sourceMappingURL=popup.module.css.map */

@@ -1,19 +1,24 @@
-import React, { useState, useEffect,  createContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 const DataContext = createContext();
 
 function DataContextProvider(props) {
-    const[flag, setFlag] = useState(false)
-    const [data, setData] = useState(false);
+    const [active, setActive] = useState(false);
+    const [modal, setModalActive] = useState(false);
 
- 
-
-      useEffect(() => {
-setData("dfhfjfhjr") },[])
-
+    async function componentDidMount(){
+      setActive(false);
+      setModalActive(false)
+      }
+    
+  
+        useEffect(() => {
+    componentDidMount();
+    },[])
+  
 
   return (
 
-    <DataContext.Provider value={{ data, flag, setFlag, setData }}>
+    <DataContext.Provider value={{ active, modal, setActive, setModalActive }}>
       {props.children}
     </DataContext.Provider>
   );

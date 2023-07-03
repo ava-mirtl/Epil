@@ -75,6 +75,7 @@
   font-size: 1vw;
   letter-spacing: 0.3px;
   border-radius: 10px;
+  border: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
