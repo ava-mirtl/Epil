@@ -1,0 +1,35 @@
+@import "../../styles/vars.scss";
+
+.form_container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    form{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    input{
+        font-family: $OpenB;
+        height: 65px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 1px solid $button-gray;
+        padding-left: 10px;
+        font-size: 1.2vmax;
+        color: $base-gray;
+        ::placeholder{
+            color: $button-gray;
+        }
+    }
+    input~div{
+        color: red;
+        margin-bottom: 10px;
+    }
+    button{
+        width: 100%;
+        font-size: 1.2vmax;
+        max-height: 65px;
+    }
+    }
+}

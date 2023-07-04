@@ -1,17 +1,14 @@
 import React, { useContext } from 'react';
 import { DataContext } from '../../data/data';
-
-
 import Sticker from "../Sticker";
 import Cards from "../Minicards";
 import Popup from '../../Popup/Popup';
 import Button from '../../Button/Button';
 import Youtube from '../../Youtube/Youtube';
-import lady from "../../../assets/img/popup_img.png"
 import styles from "../main.module.scss";
 
 export default function Man() {
-    const {active, modal, setActive, setModalActive} = useContext(DataContext);
+    const {active, setActive} = useContext(DataContext);
 
     return (<>
         <div className={styles.container}>
@@ -45,6 +42,6 @@ export default function Man() {
                 </div>
             </div>
         </div>
-        {active&&<Popup img={lady} txt="Оставьте Ваш номер телефона и мы с вами свяжемся!" setState={setActive}/>}
+        {active&&<Popup lazer={false} txt="Оставьте Ваш номер телефона и мы с вами свяжемся!" setState={setActive}/>}
         </>
         )}
