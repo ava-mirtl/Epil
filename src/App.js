@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { DataContextProvider } from "./components/data/data";
 import Header from "./components/Header/Header";
 import Man from "./components/Main/Man/Man";
@@ -14,10 +14,14 @@ function App() {
             <Router>
               <Header/>
                 <Routes>
-                    <Route path="*" element={<Error/>} />
-                    <Route path="/" element={<Man/>} />
                     <Route path="/man" element={<Man/>} />
-                    <Route path="/woman" element={<Woman/>}/>
+                    <Route path="/woman1" element={<Woman/>}/>
+                    <Route path="/woman2" element={<Woman/>}/>
+                    <Route path="/woman3" element={<Woman/>}/>
+                    <Route path="/woman4" element={<Woman/>}/>
+                    <Route path="/woman5" element={<Woman/>}/>
+                    <Route path="*" element={<Error/>} />
+                    <Route path="/" element={<Woman/>} />
                 </Routes>
             </Router>
           </DataContextProvider>

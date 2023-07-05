@@ -9,7 +9,9 @@ import styles from "../main.module.scss";
 
 export default function Man() {
     const {active, setActive} = useContext(DataContext);
-
+    const handleState = () =>{
+        setActive(true)
+    }
     return (<>
         <div className={styles.container}>
             <div className={styles.main}>
@@ -33,7 +35,7 @@ export default function Man() {
                     </div>
                     <Cards/>
                     <div className={styles.btns_container}>
-                        <Button txt="ЗАПИСАТЬСЯ ОНЛАЙН" setState={setActive}/>
+                        <Button txt="ЗАПИСАТЬСЯ ОНЛАЙН" func={handleState}/>
                         <Youtube/>
                     </div>
                 </div> 

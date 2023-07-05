@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from "./button.module.scss"
 
-export default function Button({txt, type, disabled, setState}) {
+export default function Button({txt, type, disabled, func}) {
     return (
-        setState
+        func
         ?
-        <button className={styles.btn} type={type} disabled={disabled} onClick={()=>setState(true)}>{txt} </button>
+        <button className={styles.btn} type={type} disabled={disabled} onClick={()=>func()}>{txt} </button>
         : 
         <button className={styles.btn} type={type} disabled={disabled}>{txt} </button>
 

@@ -4,10 +4,12 @@ const DataContext = createContext();
 function DataContextProvider(props) {
     const [active, setActive] = useState(false);
     const [modal, setModalActive] = useState(false);
-
+    const [epilForm, setEpilForm] = useState(false);
+    
     async function componentDidMount(){
       setActive(false);
-      setModalActive(false)
+      setModalActive(false);
+      setEpilForm(false);
       }
     
   
@@ -18,7 +20,7 @@ function DataContextProvider(props) {
 
   return (
 
-    <DataContext.Provider value={{ active, modal, setActive, setModalActive }}>
+    <DataContext.Provider value={{ active, modal, epilForm, setActive, setModalActive, setEpilForm }}>
       {props.children}
     </DataContext.Provider>
   );

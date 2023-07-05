@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext }from 'react';
+import { DataContext } from '../data/data';
 import { Formik, Form, Field } from 'formik';
 import Button from '../Button/Button';
 import styles from "./form.module.scss";
 
 export default function Forma() {
+  const {epilForm} = useContext(DataContext);
 
     function validateUsername(value) {
         let error;
@@ -31,7 +33,11 @@ export default function Forma() {
         return error;
       }
       const handleSubmit = (values) => {
-            console.log(values.username, values.phone);
+        epilForm?
+            console.log("да", epilForm, values.username, values.phone)
+            :
+            console.log("net", values.username, values.phone)
+
 
         //   emailjs.send("service_onlg9xh","template_32oil1t", {
         //       phone: phone,
