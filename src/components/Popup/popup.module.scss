@@ -80,3 +80,30 @@ align-items: center;
         max-width: 600px;
     }
 }
+
+@media (max-width: 780px) {
+
+    .container{
+        .title_container{
+         
+            height: 30%;
+        }
+        .content_container{
+            display: flex;
+            align-items: flex-end;
+            height: 70%;
+            
+        }
+    .popup_container, .lazer_container{
+        width: 300px;
+        height:270px;
+        padding: 10px;
+        border-radius: 20px;
+        .title, .x{
+            font-size: 15pt;
+            line-height: 100%;
+            letter-spacing: 0.2px;
+            
+        }
+    }
+}}

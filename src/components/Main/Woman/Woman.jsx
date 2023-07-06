@@ -21,7 +21,7 @@ import {
 import styles from "../main.module.scss";
 
 export default function Woman() {
-const {active, setActive} = useContext(DataContext);
+const {quiz, setQuiz, } = useContext(DataContext);
 const match1 = useMatch('/woman1');
 const match2 = useMatch('/woman2');
 const match3 = useMatch('/woman3');
@@ -29,7 +29,7 @@ const match4 = useMatch('/woman4');
 const match5 = useMatch('/woman5');
 
 const handleState = () =>{
-    setActive(true)
+    setQuiz(true)
 }
 
     return (<>
@@ -40,7 +40,7 @@ const handleState = () =>{
                     {match2&&<Title2/>}                    
                     {match3&&<Title3/>}                    
                     {match4&&<Title4/>}                    
-                    {match5&&<Title5/>}                                      
+                    {match5&&<Title5/>}                    
                     <div className={styles.promo_block}>
                         <div className={styles.promo_label}>Акция</div>
                     {match1&&<Subtitle1/>}
@@ -63,6 +63,6 @@ const handleState = () =>{
                 </div>
             </div>
         </div>
-        {active&&<Quiz setState={setActive}/>}
+        {quiz&&<Quiz setState={setQuiz}/>}
         </>
         )}

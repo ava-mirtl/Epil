@@ -8,8 +8,11 @@ import { DataContext } from '../data/data';
 import styles from "./header.module.scss";
 import Popup from "../Popup/Popup";
 
+
 export default function Header() {
   const {modal, setModalActive} = useContext(DataContext);
+
+
     return (
         <div className={styles.header__container}>
           <div className={styles.header}>

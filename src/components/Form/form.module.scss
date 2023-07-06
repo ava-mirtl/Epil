@@ -33,3 +33,27 @@
     }
     }
 }
+
+@media (max-width: 780px) {
+
+    .form_container{
+        height: 90%;
+        align-items: flex-end;
+        max-height: fit-content;
+        form{
+            width: 250px;
+
+        input{
+            height: 45px;
+            margin-bottom: 8px;
+
+        }
+       
+        button{
+            max-height: 45px;
+
+        }
+        }
+    }
+    
+}

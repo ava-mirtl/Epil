@@ -5,14 +5,15 @@ import Button from '../Button/Button';
 import { Formik, Field, Form } from 'formik';
 import styles from "./quiz.module.scss";
 
-export default function Quiz({setState}) {
-    const {active, setActive, epilForm, setEpilForm} = useContext(DataContext);
+export default function Quiz() {
+    const {modal, setModalActive, setEpilForm, setQuiz} = useContext(DataContext);
     const [counter, setCounter]= useState(1);
+
     const popupRef = useRef(null);
 
     const handleClick=(e)=>{
         if (!popupRef.current.contains(e.target)){        
-        setState(false)}
+        setQuiz(false)}
     }
 
 
@@ -25,11 +26,12 @@ export default function Quiz({setState}) {
         }
         else  if(counter===3){
             setCounter(4)
+            setModalActive(true);
         }
     }
     const handleBackward=()=>{
         if(counter===1){
-            setState(false)
+            setQuiz(false)
         }
         else  if(counter===2){
             setCounter(1)
@@ -39,12 +41,9 @@ export default function Quiz({setState}) {
         }
     }
     
-    if (counter===4) {
-        console.log(epilForm);
-    }
-
+    
     return(
-        <div className={styles.container} 
+        <><div className={!modal?styles.container:styles.none} 
             onClick={(e)=>{handleClick(e)}}>
                 <div className={styles.popup}
                     ref={popupRef}>
@@ -58,12 +57,12 @@ export default function Quiz({setState}) {
                     </div>
                    <div className={styles.up}>
                         <Formik initialValues={{ epil: '', zone: '', contraindications: ''}}
-                                onSubmit={async (values) => {
-                                    setEpilForm(values)
+                                onSubmit={(values, {resetForm})   => {
+                                    setEpilForm(values);
                                 }}>
                             {({ values }) => (
                                 <Form>                    
-                                     {counter===1&&<><div className={styles.up_title} id="epil"> Пробовали ли Вы до этого лазерную эпиляцию?</div>
+                                     {counter===1&&<div  className={styles.form_cont}><div className={styles.up_title} id="epil"> Пробовали ли Вы до этого лазерную эпиляцию?</div>
                                         <div  className={styles.label_c} role="group" aria-labelledby="epil">
                                             <label>
                                                 <Field type="radio" name="epil" value="Да" />
@@ -77,8 +76,8 @@ export default function Quiz({setState}) {
                                                 <Field type="radio" name="epil" value="Затрудняюсь ответить" />
                                                     Затрудняюсь ответить
                                             </label>
-                                    </div></>}
-                                    {counter===2&&<><div id="zone-radio" className={styles.up_title}>Какую зону хотите сделать?</div>
+                                    </div></div>}
+                                    {counter===2&&<div  className={styles.form_cont}><div id="zone-radio" className={styles.up_title}>Какую зону хотите сделать?</div>
                                     <div className={styles.label_c} role="group" aria-labelledby="zone-radio">
                                         <label>
                                             <Field type="radio" name="zone" value="Комлекс трёх зон" />
@@ -108,8 +107,8 @@ export default function Quiz({setState}) {
                                             <Field type="radio" name="zone" value="Затрудняюсь ответить" />
                                             Затрудняюсь ответить
                                         </label>
-                                    </div></>}
-                                    {counter===3&&<><div className={styles.up_title} id="contra">
+                                    </div></div>}
+                                    {counter===3&&<div  className={styles.form_cont}><div className={styles.up_title} id="contra">
                                         Есть ли у Вас хоть одно из противопоказаний?
                                     </div>
                                     <div className={styles.label_c} role="group" aria-labelledby="contra">
@@ -133,7 +132,7 @@ export default function Quiz({setState}) {
                                             <Field type="radio" name="contraindications" value="Нет" />
                                                 Нет
                                         </label>
-                                    </div></>}
+                                    </div></div>}
                                     <div className={styles.btns}>
                                         <button  className={styles.gray_btn} onClick={handleBackward}>НАЗАД</button>        
                                         <Button type='submit' txt="ВПЕРЕД" func={handleForward}/>        
@@ -142,10 +141,11 @@ export default function Quiz({setState}) {
                             )}
                         </Formik>
                 </div>
-                {(counter===4&active)
-                ?
-                <Popup lazer={true} txt="Оставьте Ваш номер телефона и получите: Бесплатную консультацию косметолога!" setState={setActive}/>
-                :<div/>}
             </div>
         </div>
+        {(counter===4&modal)
+?
+<Popup lazer={true} txt="Оставьте Ваш номер телефона и получите: Бесплатную консультацию косметолога!" setState={setModalActive}/>
+:<div/>}
+        </>
     )}

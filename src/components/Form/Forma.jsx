@@ -1,13 +1,15 @@
 import React, { useContext }from 'react';
 import { DataContext } from '../data/data';
+import emailjs from '@emailjs/browser';
 import { Formik, Form, Field } from 'formik';
 import Button from '../Button/Button';
 import styles from "./form.module.scss";
 
 export default function Forma() {
-  const {epilForm} = useContext(DataContext);
+  const {epilForm, setActive, setModalActive, setEpilForm, setQuiz} = useContext(DataContext);
 
     function validateUsername(value) {
+
         let error;
         if (!value) {
             error = 'Введите имя';
@@ -33,30 +35,54 @@ export default function Forma() {
         return error;
       }
       const handleSubmit = (values) => {
+        console.log(epilForm);
         epilForm?
-            console.log("да", epilForm, values.username, values.phone)
-            :
-            console.log("net", values.username, values.phone)
-
-
-        //   emailjs.send("service_onlg9xh","template_32oil1t", {
-        //       phone: phone,
-        //       name:  username,
-        //       }, 'ZjXCD_toGWo9fEoVg') 
-        //       .then((result) => {
-        //         console.log(result);}, 
-        //       (error) => {
-        //         console.log(error);}
-        //       );
-                // setActive(true)
+            handleBigForm(values.phone, values.username, epilForm.zone, epilForm.contraindications, epilForm.epil):
+            handleForm(values.phone, values.username)
           }
-
+          const handleForm = (phone, username) =>{
+            
+            emailjs.send("service_5c2ig1m", "template_yv7fr9s", {
+                    phone: phone,
+                    from_name:  username,
+                   
+                    }, "viy8Z8sPUzp2B0OpU") 
+                    .then((result) => {
+                      console.log(result);}, 
+                    (error) => {
+                      console.log(error);}
+                    );
+                    handleState(setActive, setModalActive, setEpilForm)
+          }
+          const handleBigForm = (phone, username, zone, contraindications, epil) =>{
+            console.log(contraindications);
+            emailjs.send("service_5c2ig1m", "template_43fzdzh", {
+                    phone: phone,
+                    from_name:  username,
+                    zone: zone, 
+                    contraindications: contraindications, 
+                    epil: epil
+                    }, "viy8Z8sPUzp2B0OpU") 
+                    .then((result) => {
+                      console.log(result);}, 
+                    (error) => {
+                      console.log(error);}
+                    );
+                    handleState( setModalActive, setEpilForm)
+          }
+          
+          const handleState = ( setModalActive) =>{
+            setModalActive(false);
+            setEpilForm(false);
+            setQuiz(false)
+          }
     return(
                 <div className={styles.form_container}>
                     <Formik
                         initialValues={{ username: '', phone: '' }}
-                        onSubmit={values => {
+                        onSubmit={(values, {resetForm})  => {
                             handleSubmit(values);
+                            resetForm();
                         }}>
                         {({ errors, touched, isSubmitting }) => (
                             <Form>
