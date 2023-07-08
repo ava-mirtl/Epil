@@ -6,7 +6,7 @@ import { Formik, Field, Form } from 'formik';
 import styles from "./quiz.module.scss";
 
 export default function Quiz() {
-    const {modal, setModalActive, setEpilForm, setQuiz} = useContext(DataContext);
+    const {modal, setModalActive, setEpilForm, setQuiz, quiz} = useContext(DataContext);
     const [counter, setCounter]= useState(1);
 
     const popupRef = useRef(null);
@@ -43,7 +43,7 @@ export default function Quiz() {
     
     
     return(
-        <><div className={!modal?styles.container:styles.none} 
+        <><div className={!modal&quiz?styles.container:styles.none} 
             onClick={(e)=>{handleClick(e)}}>
                 <div className={styles.popup}
                     ref={popupRef}>
@@ -55,14 +55,14 @@ export default function Quiz() {
                         {counter}/3
                         </div>
                     </div>
-                   <div className={styles.up}>
+                    <div className={styles.up}>
                         <Formik initialValues={{ epil: '', zone: '', contraindications: ''}}
                                 onSubmit={(values, {resetForm})   => {
                                     setEpilForm(values);
                                 }}>
                             {({ values }) => (
                                 <Form>                    
-                                     {counter===1&&<div  className={styles.form_cont}><div className={styles.up_title} id="epil"> Пробовали ли Вы до этого лазерную эпиляцию?</div>
+                                    {counter===1&&<div  className={styles.form_cont}><div className={styles.up_title} id="epil"> Пробовали ли Вы до этого лазерную эпиляцию?</div>
                                         <div  className={styles.label_c} role="group" aria-labelledby="epil">
                                             <label>
                                                 <Field type="radio" name="epil" value="Да" />

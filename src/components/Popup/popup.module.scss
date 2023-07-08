@@ -84,6 +84,8 @@ align-items: center;
 @media (max-width: 780px) {
 
     .container{
+        max-width: 100%;
+        min-height: 100%;
         .title_container{
          
             height: 30%;

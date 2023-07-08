@@ -45,7 +45,10 @@ justify-content: center;
         width: 120%;
     }
     .title1,  .title4, .title5{
-        font-size: 5vw;
+        font-size: 4.5vw;
+    }
+    .title, .title3{
+        font-size: 3vw;
     }
     .promo_block{
         display: flex;
@@ -64,7 +67,7 @@ justify-content: center;
         }
         .promo_txt, .promo_txtW, .promo_txt4{
             font-family: $NeueR;
-            font-size: 1.9vw;
+            font-size: 1.8vw;
             background-color: $base-gray;
             background-image: linear-gradient(180deg, rgb(43, 43, 43), rgb(121, 121, 121) 57%, rgb(26, 26, 26));
             background-clip: text;
@@ -78,7 +81,7 @@ justify-content: center;
     }
     .list_title{
         font-family: $NeueR;
-        font-size: 2vw;
+        font-size: 1.8vw;
         background-color: $base-gray;
         background-image: linear-gradient(180deg, rgb(43, 43, 43), rgb(121, 121, 121) 57%, rgb(26, 26, 26));
         background-clip: text;
@@ -91,7 +94,7 @@ justify-content: center;
         margin: 5px 0;
         li{
             font-family: $OpenR;
-        font-size: 1.2vw;
+        font-size: 1.1vw;
         color: $base-gray;
         }
     }
