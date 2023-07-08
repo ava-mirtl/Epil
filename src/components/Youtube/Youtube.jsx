@@ -35,7 +35,7 @@ export default function Youtube() {
             <video 
                 onClick={(e)=>togglePlay(e)}
                 ref={videoRef}
-                width="60%"
+                width="80%"
                 height="60%"
                 controls>
                     <source src={video} type='video/mp4'/>

@@ -37,6 +37,8 @@ export default function Header() {
             <div className={styles.phone_block}>
             <a className={styles.phone} href='tel:+79265300603'><img src={phone} alt="телефон"/><p>+7(926) 530-06-03</p></a>
             <div className={styles.btn} onClick={()=>setModalActive(true)}>Заказать обратный звонок</div>
+            <div className={styles.btn_mini} onClick={()=>setModalActive(true)}><img src={phone} alt="телефон"/><p>связаться</p></div>
+
             </div>
             </div>
 

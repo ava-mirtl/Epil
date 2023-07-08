@@ -34,32 +34,42 @@ const handleState = () =>{
 
     return (<>
         <div className={styles.container}>
-            <div className={styles.main}>
-                <div className={styles.left}>
-                    {match1&&<Title1/>}
-                    {match2&&<Title2/>}                    
-                    {match3&&<Title3/>}                    
-                    {match4&&<Title4/>}                    
-                    {match5&&<Title5/>}                    
-                    <div className={styles.promo_block}>
-                        <div className={styles.promo_label}>Акция</div>
-                    {match1&&<Subtitle1/>}
-                    {match2&&<Subtitle2/>}                    
-                    {match3&&<Subtitle3/>}                    
-                    {match4&&<Subtitle4/>}                    
-                    {match5&&<Subtitle5/>}                 
+            <div className={styles.fon}>
+                <div className={styles.fon_w}></div>
+                <div className={styles.main}>
+                    <div className={styles.leftW}>
+                        {match1&&<Title1/>}
+                        {match2&&<Title2/>}                    
+                        {match3&&<Title3/>}                    
+                        {match4&&<Title4/>}                    
+                        {match5&&<Title5/>}                    
+                        <div className={styles.promo_block}>
+                            {match4? <></>:<div className={styles.promo_label}>Акция</div>}
+                        {match1&&<Subtitle1/>}
+                        {match2&&<Subtitle2/>}                    
+                        {match3&&<Subtitle3/>}                    
+                        {match4&&<Subtitle4/>}                    
+                        {match5&&<Subtitle5/>}                 
+                        </div>
+                    
+                        {match4&&<Subsubtitle/>}                    
+                        {match5&&<Subsubtitle/>} 
+                        <div className={styles.bksp}></div>
+                        <Cards/>
+                        <div className={styles.btns_container}>
+                            <Button txt="ЗАПИСАТЬСЯ ОНЛАЙН" func={handleState}/>
+                            <Youtube/>
+                        </div>
+                        <div className={styles.license}>Номер мед. лицензии: Л041-01137-77/00377330</div>
+                        <div className={styles.btns_container_mi}>
+                            <Button txt="ЗАПИСАТЬСЯ ОНЛАЙН" func={handleState}/>
+                            <div className={styles.license_mi}>Номер мед. лицензии: Л041-01137-77/00377330</div>
+                            <Youtube/>
+                        </div>
+                    </div> 
+                    <div className={styles.woman_right}>
+                        <Sticker/>
                     </div>
-                   
-                    {match4&&<Subsubtitle/>}                    
-                    {match5&&<Subsubtitle/>} 
-                    <Cards/>
-                    <div className={styles.btns_container}>
-                        <Button txt="ЗАПИСАТЬСЯ ОНЛАЙН" func={handleState}/>
-                        <Youtube/>
-                    </div>
-                </div> 
-                <div className={styles.woman_right}>
-                    <Sticker/>
                 </div>
             </div>
         </div>

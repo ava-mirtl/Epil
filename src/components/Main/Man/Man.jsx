@@ -14,6 +14,8 @@ export default function Man() {
     }
     return (<>
         <div className={styles.container}>
+        <div className={styles.fon}>
+            <div className={styles.fon_man}></div>
             <div className={styles.main}>
                 <div className={styles.left}>
                     <h1 className={styles.title}>Студия лазерной эпиляции для мужчин в Москве</h1>
@@ -38,11 +40,18 @@ export default function Man() {
                         <Button txt="ЗАПИСАТЬСЯ ОНЛАЙН" func={handleState}/>
                         <Youtube/>
                     </div>
+                    <div className={styles.license}>Номер мед. лицензии: Л041-01137-77/00377330</div>
+                    <div className={styles.btns_container_mi}>
+                        <Button txt="ЗАПИСАТЬСЯ ОНЛАЙН" func={handleState}/>
+                        <div className={styles.license_mi}>Номер мед. лицензии: Л041-01137-77/00377330</div>
+                        <Youtube/>
+                    </div>
                 </div> 
                 <div className={styles.right}>
                     <Sticker/>
                 </div>
             </div>
+        </div>
         </div>
         {active&&<Popup lazer={false} txt="Оставьте Ваш номер телефона и мы с вами свяжемся!" setState={setActive}/>}
         </>
