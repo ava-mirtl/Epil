@@ -13,10 +13,6 @@ export default function Forma() {
         let error;
         if (!value) {
             error = 'Введите имя';
-          } else if (
-            !/^[a-zA-Zа-яёА-ЯЁ]+$/u.test(value)
-          ) {
-            error = 'Недопустимые символы в поле "Имя"';
           }
           else if (value === 'admin'){
             error = 'Отличная попытка!';

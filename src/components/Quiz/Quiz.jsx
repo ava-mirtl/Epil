@@ -25,8 +25,13 @@ export default function Quiz() {
             setCounter(3)
         }
         else  if(counter===3){
-            setCounter(4)
+            setCounter(4);
             setModalActive(true);
+
+                }
+        else  if(counter===4){
+            setModalActive(true);
+            setQuiz(false);
         }
     }
     const handleBackward=()=>{
@@ -43,7 +48,7 @@ export default function Quiz() {
     
     
     return(
-        <><div className={!modal&quiz?styles.container:styles.none} 
+        <>{quiz&&<div className={counter===4?styles.none:styles.container} 
             onClick={(e)=>{handleClick(e)}}>
                 <div className={styles.popup}
                     ref={popupRef}>
@@ -142,10 +147,10 @@ export default function Quiz() {
                         </Formik>
                 </div>
             </div>
-        </div>
+        </div>}
         {(counter===4&modal)
 ?
-<Popup lazer={true} txt="Оставьте Ваш номер телефона и получите: Бесплатную консультацию косметолога!" setState={setModalActive}/>
+<Popup lazer={true} txt="Оставьте Ваш номер телефона и получите: Бесплатную консультацию косметолога!" setState={setModalActive} setQuiz={setQuiz}/>
 :<div/>}
         </>
     )}

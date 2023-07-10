@@ -27,6 +27,7 @@ const match2 = useMatch('/woman2');
 const match3 = useMatch('/woman3');
 const match4 = useMatch('/woman4');
 const match5 = useMatch('/woman5');
+const match = useMatch('/');
 
 const handleState = () =>{
     setQuiz(true)
@@ -38,6 +39,7 @@ const handleState = () =>{
                 <div className={styles.fon_w}></div>
                 <div className={styles.main}>
                     <div className={styles.leftW}>
+                        {match&&<Title3/>}
                         {match1&&<Title1/>}
                         {match2&&<Title2/>}                    
                         {match3&&<Title3/>}                    
@@ -45,6 +47,7 @@ const handleState = () =>{
                         {match5&&<Title5/>}                    
                         <div className={styles.promo_block}>
                             {match4? <></>:<div className={styles.promo_label}>Акция</div>}
+                        {match&&<Subtitle3/>}
                         {match1&&<Subtitle1/>}
                         {match2&&<Subtitle2/>}                    
                         {match3&&<Subtitle3/>}                    

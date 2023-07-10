@@ -4,7 +4,6 @@ import styles from "./popup.module.scss";
 
 export default function Popup({lazer, txt, setState}) {
   const popupRef = useRef(null);
-      
       const handleClick=(e)=>{
        if (!popupRef.current.contains(e.target)){        
         setState(false)        }

@@ -26,7 +26,7 @@ export default function Header() {
             <div className={styles.right_block}>
 
             <div className={styles.icons_block}>
-              <a href="https:/t.me/golayapravdaaaa">
+              <a href="https://t.me/golayapravdaaaa">
                 <img src={telegram} alt="телеграм"/>
               </a>
               <a href="https://wa.me/79265300603">
