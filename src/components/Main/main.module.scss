@@ -30,6 +30,7 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    height: 100%;
     .title, .title1, .title2, .title3, .title4, .title5{
         font-family: $NeueB;
         color: $base-gray;
@@ -37,18 +38,16 @@ justify-content: center;
         background-image: linear-gradient(180deg, rgb(43, 43, 43), rgb(121, 121, 121) 57%, rgb(26, 26, 26));
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 4vw;
-        line-height: 120%;
-        letter-spacing: 0.2px;
+        font-size: 80px;
         padding: 20px 0;
         margin: 0;
-        width: 120%;
+        width: 125%;
     }
     .title1,  .title4, .title5{
-        font-size: 4.5vw;
+        font-size: 90px;
     }
     .title, .title3{
-        font-size: 3vw;
+        font-size: 54px;
     }
     .promo_block{
         display: flex;
@@ -58,16 +57,15 @@ justify-content: center;
             font-family: $NeueB;
             border-radius: 10px;
             margin-right: 10px;
-            font-size: 2.2vw;
-            padding: 5px 10px;
+            font-size: 63px;
+            padding: 6px 26px;
             background: linear-gradient(180deg, rgb(255, 0, 0), rgb(255, 131, 131) 57%, rgb(255, 0, 0));
         }
-        .promo_txtW{
-            width: 50%;
-        }
         .promo_txt, .promo_txtW, .promo_txt4{
+            width: 250%;
+            font-size: 36px;
+            min-width: fit-content;
             font-family: $NeueR;
-            font-size: 1.8vw;
             background-color: $base-gray;
             background-image: linear-gradient(180deg, rgb(43, 43, 43), rgb(121, 121, 121) 57%, rgb(26, 26, 26));
             background-clip: text;
@@ -78,10 +76,17 @@ justify-content: center;
                 margin-right: 10px;
             }
         }
+        .promo_txtW{
+            min-width: none;
+            width: 600px;
+            font-size: 42px;
+
+        }
     }
     .list_title{
         font-family: $NeueR;
-        font-size: 1.8vw;
+        font-size: 44px;
+        min-width: 600px;
         background-color: $base-gray;
         background-image: linear-gradient(180deg, rgb(43, 43, 43), rgb(121, 121, 121) 57%, rgb(26, 26, 26));
         background-clip: text;
@@ -236,18 +241,19 @@ justify-content: center;
     .container{
         
         .left, .leftW{
-            .title{
-                font-size: 3.6vw;
+            .title, .title1, .title2, .title3, .title4, .title5{
+                font-size: 4vw;
             }
             .promo_block{
                 .promo_label{
-                    font-size: 2.4vw;
+                    font-size: 4vw;
                 }
                 .promo_txt{
                     font-size: 2.4vw;
                 }
                .promo_txtW, .promo_txt4{
                     font-size: 3.2vw;
+                    line-height: 100%;
                     width: 100%;
                     padding-bottom: 20px;
                 }
@@ -331,7 +337,7 @@ justify-content: center;
             .promo_block{
                 
                 .promo_label{
-                    font-size: 3vw;
+                    font-size: 4.8vw;
                 }
                 .promo_txtW{
                     width: 60%;
@@ -400,6 +406,19 @@ justify-content: center;
         .main{
             width: 96%;
             .left, .leftW{
+                .promo_block{
+                
+                    .promo_label{
+                        font-size: 4.8vw;
+                    }
+                    .promo_txtW{
+                        width: 100%;
+                        min-width: 300px;
+                    }
+                    .promo_txt, .promo_txtW, .promo_txt4{
+                        font-size: 2.9vw;
+                    }
+                }
                 .minicards{
                    
                     .minicard{
@@ -481,7 +500,7 @@ justify-content: center;
             max-height:100%;
             margin: 0;
             justify-self: center;
-        }
+        
       
         .left, .leftW{
             width: 90%;
@@ -510,9 +529,11 @@ justify-content: center;
             .promo_block{
                 
                 .promo_label{
-                    font-size: 6.2vw;
+                    font-size: 8vw;
                 }
                 .promo_txt, .promo_txtW, .promo_txt4{
+                    width: 50%;
+                    min-width: none;
                     font-family: $NeueR;
                     font-size: 3.8vw;
                 }
@@ -551,7 +572,7 @@ justify-content: center;
         padding: 10px 0;
             }
             .bksp{
-                height: 100px;
+                height: 50px;
             }
             .minicards{
                 display: flex;
@@ -569,7 +590,7 @@ justify-content: center;
                     }
                 }
             }
-        }
+        }}
         .right, .woman_right{
             height: fit-content;
             background-image:none;

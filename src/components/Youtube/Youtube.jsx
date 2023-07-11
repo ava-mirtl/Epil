@@ -28,7 +28,7 @@ export default function Youtube() {
     return (
         <>
         <div className={styles.container}>
-            <img src={utube} alt="youtube иконка" />
+            <img src={utube} alt="youtube иконка" onClick={()=>setActive(true)}/>
             <p className={styles.txt} onClick={()=>setActive(true)}>Познакомьтесь с нами</p>
         </div>
         <div className={active?styles.popup:styles.video}  onClick={()=>toggleStop()}>
